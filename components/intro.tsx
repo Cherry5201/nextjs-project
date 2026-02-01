@@ -1,5 +1,5 @@
 import Image from "next/image";
-import catIntro from "./cat-intro.jpg";
+import catIntro from "../images/cat-intro.jpg";
 
 export default function Intro() {
   return (
@@ -24,6 +24,8 @@ export default function Intro() {
             alt="Cat Introduction"
             fill
             className="object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
           /> 
         </div>
       </div>

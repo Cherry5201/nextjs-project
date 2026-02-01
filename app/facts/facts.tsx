@@ -40,7 +40,7 @@ export default function Facts() {
   ];
 
   return (
-    <section className="py-20 bg-orange-50 rounded-3xl my-10 px-8">
+    <section className="py-10 bg-orange-200 rounded-3xl border border-orange-100 px-8">
       <h2 className="text-3xl font-bold text-orange-900 mb-10 text-center">Fun Facts About Cats</h2>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {facts.map((fact, index) => {

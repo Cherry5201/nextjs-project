@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-orange-50 text-orange-900 min-h-screen`} style={{ backgroundColor: "#fff7ed" }}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-orange-50 text-orange-900 min-h-screen pb-24`} style={{ backgroundColor: "#fff7ed" }}>
         <Navbar />
         {children}
         <BackToTop />

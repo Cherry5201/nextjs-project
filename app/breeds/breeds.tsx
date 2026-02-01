@@ -1,4 +1,13 @@
 import Image from "next/image";
+import britishShorthair from "../../images/cat-britishshorthair.jpg";
+import americanShorthair from "../../images/cat-americanshorthair.jpg";
+import siamese from "../../images/cat-siamese.jpg";
+import ragdoll from "../../images/cat-ragdoll.jpg";
+import maineCoon from "../../images/cat-maine-coon.jpg";
+import persian from "../../images/cat-persian.jpg";
+import bengal from "../../images/cat-bengal.jpg";
+import sphynx from "../../images/cat-sphynx.jpg";
+import domestic from "../../images/cat-domestic.jpg";
 
 export default function Breeds() {
   const breeds = [
@@ -6,55 +15,64 @@ export default function Breeds() {
       name: "British Shorthair",
       personality: "Calm, gentle, independent",
       traits: "Round face, dense coat, sturdy body",
-      bestFor: "Busy owners, first-time cat owners"
+      bestFor: "Busy owners, first-time cat owners",
+      src: britishShorthair
     },
     {
       name: "American Shorthair",
       personality: "Friendly, playful, intelligent",
       traits: "Strong physique, adaptable, low maintenance",
-      bestFor: "Families, homes with children"
+      bestFor: "Families, homes with children",
+      src: americanShorthair
     },
     {
       name: "Siamese",
       personality: "Affectionate, vocal, social",
       traits: "Blue eyes, color-point coat",
-      bestFor: "Owners who enjoy interaction and companionship"
+      bestFor: "Owners who enjoy interaction and companionship",
+      src: siamese
     },
     {
       name: "Ragdoll",
       personality: "Gentle, loving, relaxed",
       traits: "Large size, blue eyes, long fur",
-      bestFor: "People who want a very affectionate cat"
+      bestFor: "People who want a very affectionate cat",
+      src: ragdoll
     },
     {
       name: "Maine Coon",
       personality: "Friendly, smart, sociable",
       traits: "Very large body, fluffy tail, thick coat",
-      bestFor: "Homes with enough space"
+      bestFor: "Homes with enough space",
+      src: maineCoon
     },
     {
       name: "Persian",
       personality: "Quiet, laid-back",
       traits: "Flat face, long coat, requires frequent grooming",
-      bestFor: "Owners with time for daily care"
+      bestFor: "Owners with time for daily care",
+      src: persian
     },
     {
       name: "Bengal",
       personality: "Energetic, curious, active",
       traits: "Leopard-like pattern, athletic build",
-      bestFor: "Owners who enjoy playful, active cats"
+      bestFor: "Owners who enjoy playful, active cats",
+      src: bengal
     },
     {
       name: "Sphynx",
       personality: "Outgoing, affectionate",
       traits: "Hairless appearance, sensitive to cold, needs skin care",
-      bestFor: "Owners comfortable with extra maintenance"
+      bestFor: "Owners comfortable with extra maintenance",
+      src: sphynx
     },
     {
       name: "Mixed-Breed / Domestic Cat",
       personality: "Varies, often intelligent and resilient",
       traits: "Strong genetics, adaptable",
-      bestFor: "Healthier, great for adoption, unique personalities"
+      bestFor: "Healthier, great for adoption, unique personalities",
+      src: domestic
     }
   ];
 
@@ -66,10 +84,11 @@ export default function Breeds() {
           <div key={index} className="group overflow-hidden rounded-3xl bg-white shadow-sm border border-orange-100 hover:shadow-xl hover:border-orange-300 transition-all duration-300 hover:scale-105">
             <div className="relative aspect-video bg-orange-50">
               <Image
-                src={`https://placehold.co/600x400/orange/white?text=${breed.name.replace(/ /g, '+')}`}
+                src={breed.src}
                 alt={breed.name}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="p-6 space-y-4">
