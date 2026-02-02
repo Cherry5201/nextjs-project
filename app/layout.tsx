@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   title: "Cat Facts & Introduction | CherryPie",
   description: "Discover the world of cats, their facts, and breeds.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 
